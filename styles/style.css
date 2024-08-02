@@ -13,6 +13,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap:wrap;
+  row-gap: 10px;
   text-underline-offset: 4px;
 }
 
@@ -50,8 +52,8 @@
   font-size: 18px;
   line-height: 24.3px;
   letter-spacing: 0.01em;
-  height: 99px;
-  width: 266.52px;
+  max-width: 266.52px;
+  width:100%;
   text-underline-offset: 3px;
 }
 
@@ -63,7 +65,6 @@
 .cover {
   display: block;
   position: relative;
-  inset: 0;
   padding: 0;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
@@ -76,45 +77,34 @@
   z-index: 1;
   background-color: rgb(0 0 0/0.6);
   inset: 0;
-  height: auto;
-  width: auto;
 }
 
 .cover__title {
   width: 100%;
-  height: 655px;
   font-weight: 700;
   font-size: 100px;
   line-height: 100%;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #fff;
-  padding: 165px 50px 135px 50px;
+  padding: 165px 50px 135px;
+  position: relative;
+  z-index: 2;
 }
 
 .aligned-text {
-  position: relative;
-  inset: 0;
-  z-index: 2;
   display: block;
   line-height: 115%;
 }
 
 .aligned-text_center {
-  position: relative;
-  inset: 0;
-  z-index: 2;
-  display: block;
-  line-height: 140%;
+  line-height: 100%;
   text-align: center;
+  padding: 20px 0;
 }
 
 .aligned-text_right {
-  position: relative;
-  inset: 0;
-  z-index: 2;
-  display: block;
-  line-height: 101%;
+  line-height: 100%;
   text-align: right;
 }
 
@@ -130,20 +120,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   padding: 0px 50px 51px 78px;
 }
 
 .cover__description-text {
   position: relative;
-  inset: 0;
   z-index: 2;
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
   color: #ffffff;
   word-spacing: 18.5px;
-  width: 637px;
   font-weight: normal;
 }
 
@@ -155,7 +142,7 @@
   border-color: #ffffff;
   border-width: 1px;
   border-style: solid;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif; 
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -168,7 +155,7 @@
 
 .lots {
   display: block;
-  padding: 22px 24px 146px;
+  padding: 22px 24px 145px;
 }
 
 .lots__heading {
@@ -177,8 +164,6 @@
   line-height: 47px;
   text-transform: uppercase;
   color: #000000;
-  height: 47px;
-  width: 121px;
   padding: 0 0 0 40px;
 }
 
@@ -194,85 +179,67 @@
 }
 
 .lots__card-list-item {
+  display: block;
   color: #fff;
-  height: 563px;
+  min-height: 563px; 
   font-weight: normal;
 }
 
-.card {
+.card-link {
   display: block;
   width: 334px;
   height: 100%;
   text-decoration: none;
 }
 
-.card_type_film {
-  position: relative;
-  inset: 0;
-  background-image: url("../images/card-lot-01.jpg");
+.card {
+  position: relative; 
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 563px;
+  max-height: 563px; 
+  /*если не указать max-height, то 2 колонка будет длинне остальных */
   height: 100%;
   width: 100%;
-  min-height: 556px;
-  background-position-x: center;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
-  position: relative;
-  inset: 0;
   background-image: url("../images/card-lot-02.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  background-position-x: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card_type_picture {
-  position: relative;
-  inset: 0;
   background-image: url("../images/card-lot-03.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  background-position-x: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card__title {
   position: relative;
-  inset: 0;
   z-index: 2;
-  display: block;
-  width: 334px;
-  height: 82px;
+  width: 100%;
   font-weight: bold;
   font-size: 22px;
   line-height: 120%;
   text-decoration-line: underline;
   text-transform: uppercase;
   padding: 51px 40px 0px;
-  text-align: start;
 }
 
 .card__text {
   position: relative;
-  inset: 0;
   z-index: 2;
   width: 100%;
   font-size: 20px;
   line-height: 120%;
-  padding: 6px 40px 48px 40px;
+  padding: 0 40px 48px;
   font-weight: normal;
-  text-align: start;
   letter-spacing: 0;
 }
 
