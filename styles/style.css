@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   row-gap: 10px;
   text-underline-offset: 4px;
 }
@@ -53,7 +53,7 @@
   line-height: 24.3px;
   letter-spacing: 0.01em;
   max-width: 266.52px;
-  width:100%;
+  width: 100%;
   text-underline-offset: 3px;
 }
 
@@ -142,7 +142,7 @@
   border-color: #ffffff;
   border-width: 1px;
   border-style: solid;
-  font-family: "Raleway", sans-serif; 
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -181,7 +181,7 @@
 .lots__card-list-item {
   display: block;
   color: #fff;
-  min-height: 563px; 
+  min-height: 563px;
   font-weight: normal;
 }
 
@@ -193,11 +193,11 @@
 }
 
 .card {
-  position: relative; 
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 563px;
-  max-height: 563px; 
+  max-height: 563px;
   /*если не указать max-height, то 2 колонка будет длинне остальных */
   height: 100%;
   width: 100%;
